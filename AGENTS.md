@@ -55,4 +55,6 @@ Pull requests should include a short summary, screenshots or a screen recording 
 
 Do not introduce npm, bundlers, or external dependencies unless the task requires them. Keep edits scoped to presentation content and supporting documentation. Avoid modifying `.idea/` unless explicitly requested.
 
+When creating, redesigning, or visually rendering presentation layouts, always read and apply `DESIGN.md` first. Treat it as the source of truth for colors, typography, spacing, component style, and overall visual direction unless the user explicitly requests a different design system.
+
 After completing any file change or task step, suggest one recommended commit message that matches the actual change. Use Conventional Commit style, for example `docs: update repository guidelines` or `feat: revise presentation landing slide`.
