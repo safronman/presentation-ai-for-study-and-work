@@ -54,3 +54,5 @@ Pull requests should include a short summary, screenshots or a screen recording 
 ## Agent-Specific Instructions
 
 Do not introduce npm, bundlers, or external dependencies unless the task requires them. Keep edits scoped to presentation content and supporting documentation. Avoid modifying `.idea/` unless explicitly requested.
+
+After completing any file change or task step, suggest one recommended commit message that matches the actual change. Use Conventional Commit style, for example `docs: update repository guidelines` or `feat: revise presentation landing slide`.
