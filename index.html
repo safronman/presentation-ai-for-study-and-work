@@ -386,6 +386,22 @@
         grid-row: 2 / 9;
       }
 
+      .hero-art {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+      }
+
+      .hero-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 26px 70px rgba(250, 255, 105, 0.14));
+        transform: scale(1.6);
+        transform-origin: center;
+      }
+
       .section-title {
         grid-column: 1 / 8;
         grid-row: 2 / 5;
@@ -970,24 +986,17 @@
               <span>01 / 10</span>
             </div>
             <div class="hero-copy reveal">
-              <p class="label">practical guide / reading deck</p>
               <h1 data-editable="true">Как использовать <em>AI</em> для обучения и работы</h1>
               <p class="hero-subtitle" data-editable="true">
                 Практические сценарии, правила эффективных запросов и ограничения, которые помогают
                 использовать AI осознанно.
               </p>
             </div>
-            <div class="hero-mockup card code-window reveal">
-              <div class="window-bar"><span>ai_workflow.sql</span><span>human-owned</span></div>
-              <pre class="code"><span class="kw">SELECT</span>
-  goal,
-  context,
-  first_draft,
-  verification,
-  final_decision
-<span class="kw">FROM</span> everyday_ai
-<span class="kw">WHERE</span> ai_replaces_thinking = <span class="accent">false</span>
-  <span class="kw">AND</span> human_checks_result = <span class="accent">true</span>;</pre>
+            <div class="hero-mockup hero-art reveal">
+              <img
+                src="img/slide-1.png"
+                alt="AI tools for study and work on a laptop with an open book"
+              />
             </div>
           </div>
         </section>
