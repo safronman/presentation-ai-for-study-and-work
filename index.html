@@ -748,12 +748,76 @@
         grid-row: 2 / 5;
       }
 
-      .s2-copy {
+      .s2-title {
+        grid-column: 1 / 12;
+        grid-row: 2 / 4;
+        align-self: start;
+        padding-top: 18px;
+      }
+
+      .s2-title h2 {
+        margin-top: 0;
+      }
+
+      .s2-subtitle {
         grid-column: 1 / 10;
+        grid-row: 4 / 5;
+        align-self: center;
+        max-width: 1160px;
+        color: var(--body);
+        font-size: 30px;
+        line-height: 1.42;
+      }
+
+      .s2-copy {
+        grid-column: 1 / -1;
         grid-row: 5 / 9;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .s2-card {
+        min-height: 276px;
+        padding: 34px 38px 32px;
+        border-color: rgba(255, 255, 255, 0.055);
+        border-radius: 12px;
+        background:
+          radial-gradient(circle at 23% 17%, rgba(250, 255, 105, 0.09), transparent 31%),
+          linear-gradient(150deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.006)),
+          #0d0c0c;
+      }
+
+      .s2-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        height: 58px;
+        margin-bottom: 26px;
+        border: 1px solid rgba(250, 255, 105, 0.35);
+        border-radius: 50%;
+        background: rgba(250, 255, 105, 0.1);
+        color: var(--primary);
+        box-shadow: 0 0 24px rgba(250, 255, 105, 0.22);
+      }
+
+      .s2-icon svg {
+        width: 34px;
+        height: 34px;
+        stroke-width: 2.3;
+      }
+
+      .s2-card h3 {
+        margin-bottom: 18px;
+        font-size: 25px;
+        line-height: 1.13;
+        letter-spacing: -0.3px;
+      }
+
+      .s2-card .body-sm {
+        font-size: 20px;
+        line-height: 1.42;
       }
 
       .s4-flow {
@@ -1007,41 +1071,51 @@
               <span class="brand"><span class="brand-mark"></span>Что такое AI</span
               ><span>02 / 10</span>
             </div>
-            <div class="section-title wide reveal">
-              <p class="label">главная рамка</p>
+            <div class="section-title wide s2-title reveal">
               <h2 data-editable="true">
-                AI полезен как
-                <mark>помощник по мышлению</mark>
-                , а не как источник готовой истины
+                AI - <mark>помощник по мышлению</mark>, а не источник готовой истины
               </h2>
             </div>
-            <div class="s2-stat card yellow stat-card reveal">
-              <p class="label">ключ</p>
-              <div class="stat">1</div>
-              <p class="body-sm" data-editable="true">
-                AI ускоряет работу с информацией, но не снимает ответственность за вывод.
-              </p>
-            </div>
+            <p class="s2-subtitle reveal" data-editable="true">
+              Современный AI помогает анализировать информацию, создавать тексты, объяснять сложные
+              темы и ускорять рутинную работу.
+            </p>
             <div class="s2-copy">
-              <div class="card stack reveal">
+              <div class="card s2-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="brain-circuit"></i></span>
                 <h3 data-editable="true">Интеллектуальные задачи</h3>
                 <p class="body-sm" data-editable="true">
-                  AI помогает анализировать, генерировать, сравнивать, объяснять и структурировать
-                  информацию.
+                  Анализирует, генерирует, сравнивает, объясняет и структурирует информацию.
                 </p>
               </div>
-              <div class="card white stack reveal">
-                <h3 data-editable="true">Практические сферы</h3>
+              <div class="card s2-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="briefcase-business"></i></span>
+                <h3 data-editable="true">Широкая сфера применения</h3>
                 <p class="body-sm" data-editable="true">
-                  Образование, бизнес, программирование, маркетинг, аналитика, управление и
-                  коммуникации.
+                  Используется в образовании, бизнесе, программировании, маркетинге, аналитике и
+                  управлении.
                 </p>
               </div>
-              <div class="card stack reveal">
+              <div class="card s2-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="zap"></i></span>
+                <h3 data-editable="true">Быстрый доступ к знаниям</h3>
+                <p class="body-sm" data-editable="true">
+                  Помогает быстрее получать знания и готовить качественные материалы.
+                </p>
+              </div>
+              <div class="card s2-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="clock"></i></span>
                 <h3 data-editable="true">Экономия времени</h3>
                 <p class="body-sm" data-editable="true">
-                  Рутинные задачи занимают меньше времени, если точно указать цель, контекст и
-                  формат ответа.
+                  Рутинные задачи занимают меньше времени при правильном запросе.
+                </p>
+              </div>
+              <div class="card s2-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="shield-check"></i></span>
+                <h3 data-editable="true">Главный вывод</h3>
+                <p class="body-sm" data-editable="true">
+                  Используйте AI как помощника по мышлению, а не полагайтесь на него как на источник
+                  готовой истины.
                 </p>
               </div>
             </div>
@@ -1592,6 +1666,7 @@ AI ускоряет подготовку,
       E
     </button>
 
+    <script src="./node_modules/lucide/dist/umd/lucide.js"></script>
     <script>
       /* === SLIDE PRESENTATION CONTROLLER === */
       class SlidePresentation {
@@ -1805,6 +1880,9 @@ AI ускоряет подготовку,
 
       window.presentation = new SlidePresentation();
       window.editor = new InlineEditor();
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
     </script>
   </body>
 </html>
