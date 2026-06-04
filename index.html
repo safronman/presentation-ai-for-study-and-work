@@ -358,6 +358,26 @@
         color: var(--on-primary);
       }
 
+      .structured-content-card {
+        border-color: rgba(255, 255, 255, 0.055);
+        background:
+          radial-gradient(circle at 13% 18%, rgba(250, 255, 105, 0.07), transparent 27%),
+          linear-gradient(150deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.006)), #0d0c0c;
+        color: var(--ink);
+      }
+
+      .structured-content-card .label,
+      .structured-content-card .body,
+      .structured-content-card .body-sm,
+      .structured-content-card .caption {
+        color: var(--body);
+      }
+
+      .structured-content-card .label,
+      .structured-content-card .badge {
+        color: var(--primary);
+      }
+
       .stack {
         display: flex;
         flex-direction: column;
@@ -494,7 +514,12 @@
 
       .slide-teacher {
         background:
-          linear-gradient(90deg, rgba(6, 9, 10, 0.9) 0%, rgba(6, 9, 10, 0.76) 45%, rgba(6, 9, 10, 0.6) 100%),
+          linear-gradient(
+            90deg,
+            rgba(6, 9, 10, 0.9) 0%,
+            rgba(6, 9, 10, 0.76) 45%,
+            rgba(6, 9, 10, 0.6) 100%
+          ),
           url("img/bg-round.jpg") center / cover no-repeat;
       }
 
@@ -820,8 +845,7 @@
         border-radius: 12px;
         background:
           radial-gradient(circle at 23% 17%, rgba(250, 255, 105, 0.09), transparent 31%),
-          linear-gradient(150deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.006)),
-          #0d0c0c;
+          linear-gradient(150deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.006)), #0d0c0c;
       }
 
       .s2-icon {
@@ -1080,8 +1104,7 @@
         border-radius: 12px;
         background:
           radial-gradient(circle at 11% 20%, rgba(250, 255, 105, 0.07), transparent 26%),
-          linear-gradient(150deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.006)),
-          #0d0c0c;
+          linear-gradient(150deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.006)), #0d0c0c;
       }
 
       .prompt-part:last-child {
@@ -1122,6 +1145,19 @@
       .s10-principles {
         grid-column: 9 / 13;
         grid-row: 5 / 9;
+      }
+
+      .s10-principles.structured-content-card {
+        padding: 34px;
+      }
+
+      .s10-principles.structured-content-card .label {
+        margin-bottom: 26px;
+      }
+
+      .s10-principles.structured-content-card .badge {
+        border-color: rgba(250, 255, 105, 0.36);
+        background: rgba(250, 255, 105, 0.08);
       }
 
       /* === ANIMATIONS === */
@@ -1237,7 +1273,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>AI for study and work</span>
-              <span>01 / 8</span>
+              <span>01 / 7</span>
             </div>
             <div class="hero-copy reveal">
               <h1 data-editable="true">Как использовать <em>AI</em> для обучения и работы</h1>
@@ -1259,7 +1295,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Что такое AI</span
-              ><span>02 / 8</span>
+              ><span>02 / 7</span>
             </div>
             <div class="section-title wide s2-title reveal">
               <h2 data-editable="true">
@@ -1279,7 +1315,9 @@
                 </p>
               </div>
               <div class="card s2-card reveal">
-                <span class="s2-icon" aria-hidden="true"><i data-lucide="briefcase-business"></i></span>
+                <span class="s2-icon" aria-hidden="true"
+                  ><i data-lucide="briefcase-business"></i
+                ></span>
                 <h3 data-editable="true">Широкая сфера применения</h3>
                 <p class="body-sm" data-editable="true">
                   Используется в образовании, бизнесе, программировании, маркетинге, аналитике и
@@ -1307,7 +1345,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Персонализация обучения</span
-              ><span>03 / 8</span>
+              ><span>03 / 7</span>
             </div>
             <div class="s3-title reveal">
               <h2 data-editable="true">
@@ -1320,7 +1358,9 @@
             </div>
             <div class="s3-cards">
               <div class="card s2-card s3-card reveal">
-                <span class="s2-icon" aria-hidden="true"><i data-lucide="sliders-horizontal"></i></span>
+                <span class="s2-icon" aria-hidden="true"
+                  ><i data-lucide="sliders-horizontal"></i
+                ></span>
                 <h3 data-editable="true">Выбор уровня сложности</h3>
                 <p class="body-sm" data-editable="true">
                   AI объясняет материал на нужном уровне: для школьника, студента, новичка или
@@ -1328,7 +1368,9 @@
                 </p>
               </div>
               <div class="card s2-card s3-card reveal">
-                <span class="s2-icon" aria-hidden="true"><i data-lucide="message-circle-question"></i></span>
+                <span class="s2-icon" aria-hidden="true"
+                  ><i data-lucide="message-circle-question"></i
+                ></span>
                 <h3 data-editable="true">Уточняющие вопросы без стеснения</h3>
                 <p class="body-sm" data-editable="true">
                   Можно задавать любые вопросы и получать понятные ответы без ограничений.
@@ -1357,7 +1399,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>AI-преподаватель</span
-              ><span>04 / 8</span>
+              ><span>04 / 7</span>
             </div>
             <div class="two-col-left s5-left stack reveal">
               <div>
@@ -1373,19 +1415,25 @@
                 <div class="cell head">Что попросить</div>
                 <div class="cell head">Зачем</div>
                 <div class="cell step-cell">
-                  <span class="step-icon" aria-hidden="true"><i data-lucide="book-open-text"></i></span>
+                  <span class="step-icon" aria-hidden="true"
+                    ><i data-lucide="book-open-text"></i
+                  ></span>
                   <span>1. Объяснение</span>
                 </div>
                 <div class="cell">Объясни тему простым языком, потом добавь строгие термины</div>
                 <div class="cell">Снять первый барьер</div>
                 <div class="cell step-cell">
-                  <span class="step-icon" aria-hidden="true"><i data-lucide="message-circle-question"></i></span>
+                  <span class="step-icon" aria-hidden="true"
+                    ><i data-lucide="message-circle-question"></i
+                  ></span>
                   <span>2. Уточнение</span>
                 </div>
                 <div class="cell">Покажи другой пример и объясни, где я могу ошибиться</div>
                 <div class="cell">Закрыть пробелы</div>
                 <div class="cell step-cell">
-                  <span class="step-icon" aria-hidden="true"><i data-lucide="clipboard-check"></i></span>
+                  <span class="step-icon" aria-hidden="true"
+                    ><i data-lucide="clipboard-check"></i
+                  ></span>
                   <span>3. Проверка</span>
                 </div>
                 <div class="cell">Задай 5 вопросов от простого к сложному и оцени ответы</div>
@@ -1401,15 +1449,11 @@
           </div>
         </section>
 
-        
-
-        
-
         <section class="slide" aria-label="Слайд 5">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Как работать с AI</span
-              ><span>05 / 8</span>
+              ><span>05 / 7</span>
             </div>
             <div class="s8-title reveal">
               <h2 data-editable="true">
@@ -1493,10 +1537,9 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Ограничения и риски</span
-              ><span>06 / 8</span>
+              ><span>06 / 7</span>
             </div>
             <div class="s9-title reveal">
-              <p class="label">ответственность остается у человека</p>
               <h2 data-editable="true">
                 AI может
                 <mark>ошибаться</mark>
@@ -1504,7 +1547,7 @@
               </h2>
             </div>
             <div class="s9-grid">
-              <div class="card risk-card stack reveal">
+              <div class="card structured-content-card risk-card stack reveal">
                 <p class="label">01</p>
                 <h3 data-editable="true">Факты</h3>
                 <p class="body-sm" data-editable="true">
@@ -1512,7 +1555,7 @@
                   решение.
                 </p>
               </div>
-              <div class="card yellow risk-card stack reveal">
+              <div class="card structured-content-card risk-card stack reveal">
                 <p class="label">02</p>
                 <h3 data-editable="true">Уверенный тон</h3>
                 <p class="body-sm" data-editable="true">
@@ -1520,7 +1563,7 @@
                   устаревшая информация.
                 </p>
               </div>
-              <div class="card white risk-card stack reveal">
+              <div class="card structured-content-card risk-card stack reveal">
                 <p class="label">03</p>
                 <h3 data-editable="true">Конфиденциальность</h3>
                 <p class="body-sm" data-editable="true">
@@ -1528,14 +1571,14 @@
                   безопасности.
                 </p>
               </div>
-              <div class="card risk-card stack reveal">
+              <div class="card structured-content-card risk-card stack reveal">
                 <p class="label">04</p>
                 <h3 data-editable="true">Зависимость</h3>
                 <p class="body-sm" data-editable="true">
                   Если делегировать все размышление, можно ослабить навык самостоятельного анализа.
                 </p>
               </div>
-              <div class="card risk-card stack reveal">
+              <div class="card structured-content-card risk-card stack reveal">
                 <p class="label">05</p>
                 <h3 data-editable="true">Решения</h3>
                 <p class="body-sm" data-editable="true">
@@ -1551,10 +1594,9 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Будущее с AI</span
-              ><span>07 / 8</span>
+              ><span>07 / 7</span>
             </div>
             <div class="s10-title reveal">
-              <p class="label">цифровая грамотность</p>
               <h2 data-editable="true">
                 AI становится
                 <mark>базовым рабочим инструментом</mark>
@@ -1576,25 +1618,25 @@ AI ускоряет подготовку,
 человек принимает решение.</pre>
             </div>
             <div class="s10-future mini-grid reveal">
-              <div class="card summary-card">
+              <div class="card structured-content-card summary-card">
                 <h3 data-editable="true">Персонализация</h3>
                 <p class="body-sm" data-editable="true">
                   Обучение будет чаще подстраиваться под цель, темп и уровень конкретного человека.
                 </p>
               </div>
-              <div class="card white summary-card">
+              <div class="card structured-content-card summary-card">
                 <h3 data-editable="true">AI-помощники</h3>
                 <p class="body-sm" data-editable="true">
                   Почти в каждой профессии появятся рабочие ассистенты для подготовки и анализа.
                 </p>
               </div>
-              <div class="card yellow summary-card">
+              <div class="card structured-content-card summary-card">
                 <h3 data-editable="true">Автоматизация</h3>
                 <p class="body-sm" data-editable="true">
                   Рутинные процессы будут ускоряться, а ценность постановки задач будет расти.
                 </p>
               </div>
-              <div class="card summary-card">
+              <div class="card structured-content-card summary-card">
                 <h3 data-editable="true">Новые роли</h3>
                 <p class="body-sm" data-editable="true">
                   Появятся профессии и обязанности, связанные с настройкой, проверкой и внедрением
@@ -1602,7 +1644,7 @@ AI ускоряет подготовку,
                 </p>
               </div>
             </div>
-            <div class="s10-principles card yellow reveal">
+            <div class="s10-principles card structured-content-card reveal">
               <p class="label">финальный вывод</p>
               <div class="principle-list">
                 <div class="list-item">
@@ -1625,81 +1667,11 @@ AI ускоряет подготовку,
             </div>
           </div>
         </section>
-
-        <section class="slide" aria-label="Слайд 8">
-          <div class="shell">
-            <div class="topbar reveal">
-              <span class="brand"><span class="brand-mark"></span>Учебные сценарии</span
-              ><span>08 / 8</span>
-            </div>
-            <div class="s4-left stack reveal">
-              <div>
-                <p class="label">не только объяснения</p>
-                <h2 data-editable="true">
-                  AI помогает
-                  <mark>учиться</mark>
-                  , повторять и проверять знания
-                </h2>
-              </div>
-              <div class="card yellow prompt-card">
-                <p class="label">пример запроса</p>
-                <p class="body-sm" data-editable="true">
-                  Составь план подготовки к экзамену по истории на 7 дней. Для каждого дня укажи
-                  темы, задания и вопросы для самопроверки.
-                </p>
-              </div>
-            </div>
-            <div class="s4-right mini-grid reveal">
-              <div class="card summary-card">
-                <h3 data-editable="true">Сложная тема</h3>
-                <p class="body-sm" data-editable="true">
-                  Попросите объяснить простым языком, затем добавить термины, примеры и типичные
-                  ошибки.
-                </p>
-              </div>
-              <div class="card white summary-card">
-                <h3 data-editable="true">Конспект</h3>
-                <p class="body-sm" data-editable="true">
-                  Дайте текст или лекцию и попросите выделить тезисы, определения, спорные места и
-                  вопросы.
-                </p>
-              </div>
-              <div class="card yellow summary-card">
-                <h3 data-editable="true">Экзамен</h3>
-                <p class="body-sm" data-editable="true">
-                  Сгенерируйте план подготовки, тесты разной сложности и разбор неправильных
-                  ответов.
-                </p>
-              </div>
-              <div class="card summary-card">
-                <h3 data-editable="true">Языки</h3>
-                <p class="body-sm" data-editable="true">
-                  Тренируйте диалоги, перевод, грамматику и исправление ошибок в естественном
-                  контексте.
-                </p>
-              </div>
-              <div class="card summary-card">
-                <h3 data-editable="true">Самопроверка</h3>
-                <p class="body-sm" data-editable="true">
-                  Попросите AI задавать вопросы по одному и объяснять, почему ответ верный или нет.
-                </p>
-              </div>
-              <div class="card white summary-card">
-                <h3 data-editable="true">Повторение</h3>
-                <p class="body-sm" data-editable="true">
-                  Просите краткие карточки, интервальное повторение и список тем, которые стоит
-                  закрепить.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
       </main>
     </div>
 
     <div class="deck-controls" aria-label="Presentation controls">
-      <span id="counter">01 / 8</span>
+      <span id="counter">01 / 7</span>
       <div class="progress-track" aria-hidden="true">
         <div class="progress-fill" id="progressFill"></div>
       </div>
