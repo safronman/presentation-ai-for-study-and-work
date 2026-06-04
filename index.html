@@ -241,6 +241,69 @@
           linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 100%);
       }
 
+      .slide-bg-1 {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.94) 0%,
+            rgba(10, 10, 10, 0.82) 42%,
+            rgba(10, 10, 10, 0.62) 100%
+          ),
+          radial-gradient(circle at 76% 26%, rgba(250, 255, 105, 0.08), transparent 22%),
+          url("img/zach-m.jpg") right center / cover no-repeat,
+          linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 100%);
+      }
+
+      .slide-bg-2 {
+        background:
+          linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.82) 100%),
+          radial-gradient(circle at 50% 50%, rgba(250, 255, 105, 0.07), transparent 28%),
+          url("img/charlesdeluvio.jpg") center 34% / cover no-repeat,
+          linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 100%);
+      }
+
+      .slide-bg-3 {
+        background:
+          linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.84) 100%),
+          radial-gradient(circle at 72% 30%, rgba(250, 255, 105, 0.06), transparent 24%),
+          url("img/giorgio-tomassetti.jpg") center center / cover no-repeat,
+          linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 100%);
+      }
+
+      .slide.slide-bg-4 {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.94) 0%,
+            rgba(10, 10, 10, 0.82) 36%,
+            rgba(10, 10, 10, 0.78) 100%
+          ),
+          radial-gradient(circle at 62% 18%, rgba(250, 255, 105, 0.06), transparent 24%),
+          url("img/dima-pechurin.jpg") center center / cover no-repeat,
+          linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 100%);
+      }
+
+      .slide-bg-5 {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.95) 0%,
+            rgba(10, 10, 10, 0.87) 48%,
+            rgba(10, 10, 10, 0.8) 100%
+          ),
+          radial-gradient(circle at 62% 22%, rgba(250, 255, 105, 0.09), transparent 24%),
+          url("img/vitaly-gariev.jpg") center center / cover no-repeat,
+          linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 100%);
+      }
+
+      .slide-bg-6 {
+        background:
+          linear-gradient(180deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.84) 100%),
+          radial-gradient(circle at 50% 60%, rgba(250, 255, 105, 0.04), transparent 24%),
+          url("img/yumu.jpg") center center / cover no-repeat,
+          linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 100%);
+      }
+
       .slide::before {
         content: "";
         position: absolute;
@@ -382,6 +445,14 @@
         filter: drop-shadow(0 26px 70px rgba(250, 255, 105, 0.14));
         transform: scale(1.6);
         transform-origin: center;
+      }
+
+      .slide-bg-1 .hero-copy {
+        grid-column: 1 / 9;
+      }
+
+      .slide-bg-1 .hero-mockup {
+        display: none;
       }
 
       .section-title {
@@ -913,7 +984,7 @@
   <body>
     <div class="deck-viewport" aria-label="Presentation viewport">
       <main class="deck-stage" id="deckStage">
-        <section class="slide active" aria-label="Слайд 1">
+        <section class="slide slide-bg-1 active" aria-label="Слайд 1">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>AI for study and work</span>
@@ -935,7 +1006,7 @@
           </div>
         </section>
 
-        <section class="slide" aria-label="Слайд 2">
+        <section class="slide slide-bg-2" aria-label="Слайд 2">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Что такое AI</span
@@ -987,7 +1058,7 @@
             </div>
           </div>
         </section>
-        <section class="slide" aria-label="Слайд 3">
+        <section class="slide slide-bg-3" aria-label="Слайд 3">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Персонализация обучения</span
@@ -1042,7 +1113,7 @@
           </div>
         </section>
 
-        <section class="slide slide-teacher" aria-label="Слайд 4">
+        <section class="slide slide-teacher slide-bg-4" aria-label="Слайд 4">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>AI-преподаватель</span
@@ -1097,7 +1168,7 @@
           </div>
         </section>
 
-        <section class="slide" aria-label="Слайд 5">
+        <section class="slide slide-bg-5" aria-label="Слайд 5">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Как работать с AI</span
@@ -1182,7 +1253,7 @@
           </div>
         </section>
 
-        <section class="slide" aria-label="Слайд 6">
+        <section class="slide slide-bg-6" aria-label="Слайд 6">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Ограничения и риски</span
