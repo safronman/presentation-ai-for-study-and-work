@@ -473,16 +473,17 @@
       }
 
       .s5-left {
-        grid-column: 1 / 6;
-        grid-row: 2 / 8;
-        align-self: center;
-        justify-content: center;
-        gap: 48px;
+        grid-column: 1 / 12;
+        grid-row: 2 / 4;
+        align-self: start;
+        justify-content: start;
+        padding-top: 22px;
       }
 
       .s5-left h2 {
-        font-size: 64px;
-        line-height: 1.07;
+        max-width: 1450px;
+        font-size: 62px;
+        line-height: 1.04;
         letter-spacing: -1.8px;
       }
 
@@ -911,19 +912,49 @@
       }
 
       .s5-table {
-        grid-column: 6 / 13;
-        grid-row: 3 / 9;
-        align-self: center;
+        grid-column: 1 / -1;
+        grid-row: 4 / 9;
+        align-self: stretch;
+        display: flex;
       }
 
       .s5-table .cell {
-        min-height: 96px;
-        padding: 20px 24px;
-        font-size: 22px;
+        min-height: 86px;
+        padding: 18px 24px;
+        font-size: 24px;
       }
 
       .s5-table .cell.head {
-        min-height: 72px;
+        min-height: 70px;
+      }
+
+      .s5-table .matrix {
+        width: 100%;
+      }
+
+      .step-cell {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .step-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(250, 255, 105, 0.42);
+        border-radius: 50%;
+        color: var(--primary);
+        background: rgba(250, 255, 105, 0.08);
+      }
+
+      .step-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke-width: 2.2;
       }
 
       .s6-mockup {
@@ -1261,8 +1292,7 @@
               <div>
                 <h2 data-editable="true">
                   Сильное обучение с AI строится как
-                  <mark>диалог</mark>
-                  , а не как один запрос
+                  <mark>диалог</mark>, а не как один запрос
                 </h2>
               </div>
             </div>
@@ -1271,16 +1301,28 @@
                 <div class="cell head">Шаг</div>
                 <div class="cell head">Что попросить</div>
                 <div class="cell head">Зачем</div>
-                <div class="cell">1. Объяснение</div>
+                <div class="cell step-cell">
+                  <span class="step-icon" aria-hidden="true"><i data-lucide="book-open-text"></i></span>
+                  <span>1. Объяснение</span>
+                </div>
                 <div class="cell">Объясни тему простым языком, потом добавь строгие термины</div>
                 <div class="cell">Снять первый барьер</div>
-                <div class="cell">2. Уточнение</div>
+                <div class="cell step-cell">
+                  <span class="step-icon" aria-hidden="true"><i data-lucide="message-circle-question"></i></span>
+                  <span>2. Уточнение</span>
+                </div>
                 <div class="cell">Покажи другой пример и объясни, где я могу ошибиться</div>
                 <div class="cell">Закрыть пробелы</div>
-                <div class="cell">3. Проверка</div>
+                <div class="cell step-cell">
+                  <span class="step-icon" aria-hidden="true"><i data-lucide="clipboard-check"></i></span>
+                  <span>3. Проверка</span>
+                </div>
                 <div class="cell">Задай 5 вопросов от простого к сложному и оцени ответы</div>
                 <div class="cell">Понять реальный уровень</div>
-                <div class="cell">4. Закрепление</div>
+                <div class="cell step-cell">
+                  <span class="step-icon" aria-hidden="true"><i data-lucide="dumbbell"></i></span>
+                  <span>4. Закрепление</span>
+                </div>
                 <div class="cell">Дай короткое упражнение и разбери мой ответ</div>
                 <div class="cell">Перейти к практике</div>
               </div>
