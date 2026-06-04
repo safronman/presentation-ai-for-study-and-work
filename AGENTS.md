@@ -2,9 +2,9 @@
 
 ## Project Structure & Module Organization
 
-This repository contains static HTML presentations. The main artifacts are `index.html` and `index-2.html`, each a self-contained deck with inline CSS and JavaScript. Supporting source notes live in `docs/`. There is currently no `src/`, `tests/`, or build output directory. IDE metadata lives in `.idea/` and should not be treated as application source.
+This repository contains a static HTML presentation. The active working deck is `index.html`, a self-contained deck with inline CSS and JavaScript. Supporting source notes live in `docs/`. Previous deck versions live in `versions/` for reference only. There is currently no `src/`, `tests/`, or build output directory. IDE metadata lives in `.idea/` and should not be treated as application source.
 
-If a deck grows beyond self-contained HTML, keep related assets in a sibling folder named after the deck, for example `index-assets/` or `index-2-assets/`, and reference them with relative paths.
+If the active deck grows beyond self-contained HTML, keep related assets in a sibling folder named after the deck, for example `index-assets/`, and reference them with relative paths.
 
 ## Build, Test, and Development Commands
 
@@ -12,13 +12,12 @@ This project uses `pnpm` for local tooling. No build step is configured; open th
 
 ```powershell
 Start-Process -FilePath .\index.html
-Start-Process -FilePath .\index-2.html
 ```
 
 For a quick markup search or content audit:
 
 ```powershell
-Select-String -Path .\index.html, .\index-2.html -Pattern "section class=`"slide"
+Select-String -Path .\index.html -Pattern "section class=`"slide"
 ```
 
 Formatting is handled by Prettier:
@@ -51,7 +50,7 @@ Validate presentation changes manually in a browser or with Playwright by checki
 - no text overflows panels at fullscreen and smaller browser sizes;
 - edit mode toggles with `E` and text remains editable.
 
-For structural checks, search `index.html` and `index-2.html` for slide sections and confirm only one slide per deck starts with `class="slide active"`.
+For structural checks, search `index.html` for slide sections and confirm only one slide starts with `class="slide active"`.
 
 ## Commit & Pull Request Guidelines
 
@@ -69,8 +68,10 @@ Pull requests should include a short summary, screenshots or a screen recording 
 
 Use `pnpm` for project tooling; do not use `npm` or `yarn` for dependency changes unless the user explicitly requests it. Do not introduce bundlers or a build pipeline unless the task requires them. Keep edits scoped to presentation content, supporting documentation, and configured tooling. Avoid modifying `.idea/` unless explicitly requested.
 
+Make presentation changes only in `index.html`. Do not edit files in `versions/`; that directory stores previous versions only for reference, comparison, and recovering ideas from earlier iterations.
+
 When creating, redesigning, or visually rendering presentation layouts, always read and apply `DESIGN.md` first. Treat it as the source of truth for colors, typography, spacing, component style, and overall visual direction unless the user explicitly requests a different design system.
 
-For `index.html` and `index-2.html` visual edits, do not launch Playwright or browser automation after completing the change unless the user explicitly requests testing.
+For `index.html` visual edits, do not launch Playwright or browser automation after completing the change unless the user explicitly requests testing.
 
 After completing any file change or task step, suggest one recommended commit message that matches the actual change. Use Conventional Commit style, for example `docs: update repository guidelines` or `feat: revise presentation landing slide`.
