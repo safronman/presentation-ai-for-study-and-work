@@ -217,10 +217,18 @@
         }
 
         mark {
-            padding: 0 10px 4px;
+            display: inline;
+            padding: 0 12px 5px;
             background: var(--primary);
             color: var(--on-primary);
             border-radius: 8px;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            line-height: 1.05;
+        }
+
+        h2 mark {
+            padding: 0 12px 6px;
         }
 
         /* === CLICKHOUSE SLIDE SYSTEM === */
@@ -966,7 +974,7 @@
                 <div class="topbar reveal"><span class="brand"><span class="brand-mark"></span>Что такое AI</span><span>02 / 10</span></div>
                 <div class="section-title wide reveal">
                     <p class="label">главная рамка</p>
-                    <h2 data-editable="true">AI полезен как помощник по мышлению, а не как источник готовой истины</h2>
+                    <h2 data-editable="true">AI полезен как <mark>помощник по мышлению</mark>, а не как источник готовой истины</h2>
                 </div>
                 <div class="s2-stat card yellow stat-card reveal">
                     <p class="label">ключ</p>
@@ -995,7 +1003,7 @@
                 <div class="topbar reveal"><span class="brand"><span class="brand-mark"></span>Персонализация обучения</span><span>03 / 10</span></div>
                 <div class="section-title wide reveal">
                     <p class="label">учиться в своем темпе</p>
-                    <h2 data-editable="true">Один материал можно объяснить под разный уровень подготовки</h2>
+                    <h2 data-editable="true">Один материал можно объяснить под <mark>разный уровень</mark> подготовки</h2>
                 </div>
                 <div class="grid-3" style="grid-column: 1 / 8;">
                     <div class="card stack reveal">
@@ -1046,7 +1054,7 @@
                 <div class="s4-left stack reveal">
                     <div>
                         <p class="label">не только объяснения</p>
-                        <h2 data-editable="true">AI помогает учиться, повторять и проверять знания</h2>
+                        <h2 data-editable="true">AI помогает <mark>учиться</mark>, повторять и проверять знания</h2>
                     </div>
                     <div class="card yellow prompt-card">
                         <p class="label">пример запроса</p>
@@ -1070,7 +1078,7 @@
                 <div class="two-col-left stack reveal">
                     <div>
                         <p class="label">главный сценарий</p>
-                        <h2 data-editable="true">Сильное обучение с AI строится как диалог, а не как один запрос</h2>
+                        <h2 data-editable="true">Сильное обучение с AI строится как <mark>диалог</mark>, а не как один запрос</h2>
                     </div>
                     <p class="body" data-editable="true">AI особенно полезен, когда вы просите не только ответ, но и проверку понимания: объяснение, уточнение, упражнение, обратную связь и следующий шаг.</p>
                     <div class="card white stat-card">
@@ -1097,7 +1105,7 @@
                 <div class="s6-left stack reveal">
                     <div>
                         <p class="label">от черновика к редактуре</p>
-                        <h2 data-editable="true">AI ускоряет текстовую работу, но финальная редактура остается за человеком</h2>
+                        <h2 data-editable="true">AI ускоряет <mark>текстовую работу</mark>, но финальная редактура остается за человеком</h2>
                     </div>
                     <div class="mini-grid">
                         <div class="card mini-card"><h3 data-editable="true">Черновики</h3><p class="body-sm" data-editable="true">Документы, письма, посты, отчеты, тезисы и первые версии структуры.</p></div>
@@ -1152,7 +1160,7 @@
                 <div class="topbar reveal"><span class="brand"><span class="brand-mark"></span>Как работать с AI</span><span>08 / 10</span></div>
                 <div class="s8-title reveal">
                     <p class="label">качество входа -> качество выхода</p>
-                    <h2 data-editable="true">Хороший запрос задает цель, контекст, формат и критерии качества</h2>
+                    <h2 data-editable="true">Хороший запрос задает <mark>цель</mark>, контекст, формат и критерии качества</h2>
                 </div>
                 <div class="s8-stat card yellow stat-card reveal">
                     <p class="label">формула</p>
@@ -1187,7 +1195,7 @@
                 <div class="topbar reveal"><span class="brand"><span class="brand-mark"></span>Ограничения и риски</span><span>09 / 10</span></div>
                 <div class="s9-title reveal">
                     <p class="label">ответственность остается у человека</p>
-                    <h2 data-editable="true">AI может ошибаться, поэтому его ответы нужно проверять</h2>
+                    <h2 data-editable="true">AI может <mark>ошибаться</mark>, поэтому его ответы нужно проверять</h2>
                 </div>
                 <div class="s9-grid">
                     <div class="card risk-card stack reveal"><p class="label">01</p><h3 data-editable="true">Факты</h3><p class="body-sm" data-editable="true">Проверяйте даты, цифры, цитаты, ссылки и утверждения, особенно если они влияют на решение.</p></div>
@@ -1204,7 +1212,7 @@
                 <div class="topbar reveal"><span class="brand"><span class="brand-mark"></span>Будущее с AI</span><span>10 / 10</span></div>
                 <div class="s10-title reveal">
                     <p class="label">цифровая грамотность</p>
-                    <h2 data-editable="true">AI становится базовым рабочим инструментом, как интернет или электронная почта</h2>
+                    <h2 data-editable="true">AI становится <mark>базовым рабочим инструментом</mark>, как интернет или электронная почта</h2>
                 </div>
                 <div class="s10-code card code-window reveal">
                     <div class="window-bar"><span>future_skills.checklist</span><span>keep</span></div>

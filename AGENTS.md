@@ -34,6 +34,8 @@ Playwright is available for browser-based checks:
 pnpm exec playwright test
 ```
 
+Do not run Playwright automatically after visual presentation edits unless the user explicitly asks for it. The user will review presentation changes manually and request Playwright checks when needed.
+
 ## Coding Style & Naming Conventions
 
 Use plain HTML, CSS, and JavaScript unless a build pipeline is intentionally introduced. Keep the presentation self-contained where practical: inline styles, inline scripts, and fixed 1920x1080 slide layout. Use Prettier defaults for files covered by the formatter, and keep indentation consistent within edited sections when making narrow manual changes.
@@ -68,5 +70,7 @@ Pull requests should include a short summary, screenshots or a screen recording 
 Use `pnpm` for project tooling; do not use `npm` or `yarn` for dependency changes unless the user explicitly requests it. Do not introduce bundlers or a build pipeline unless the task requires them. Keep edits scoped to presentation content, supporting documentation, and configured tooling. Avoid modifying `.idea/` unless explicitly requested.
 
 When creating, redesigning, or visually rendering presentation layouts, always read and apply `DESIGN.md` first. Treat it as the source of truth for colors, typography, spacing, component style, and overall visual direction unless the user explicitly requests a different design system.
+
+For `index.html` and `index-2.html` visual edits, do not launch Playwright or browser automation after completing the change unless the user explicitly requests testing.
 
 After completing any file change or task step, suggest one recommended commit message that matches the actual change. Use Conventional Commit style, for example `docs: update repository guidelines` or `feat: revise presentation landing slide`.
