@@ -472,6 +472,25 @@
         grid-row: 2 / 9;
       }
 
+      .s5-left {
+        grid-column: 1 / 6;
+        grid-row: 2 / 8;
+        align-self: center;
+        justify-content: center;
+        gap: 48px;
+      }
+
+      .s5-left h2 {
+        font-size: 64px;
+        line-height: 1.07;
+        letter-spacing: -1.8px;
+      }
+
+      .s5-left .body {
+        max-width: 760px;
+        font-size: 29px;
+      }
+
       .code-window {
         height: 100%;
         padding: 0;
@@ -879,6 +898,17 @@
       .s5-table {
         grid-column: 6 / 13;
         grid-row: 3 / 9;
+        align-self: center;
+      }
+
+      .s5-table .cell {
+        min-height: 96px;
+        padding: 20px 24px;
+        font-size: 22px;
+      }
+
+      .s5-table .cell.head {
+        min-height: 72px;
       }
 
       .s6-mockup {
@@ -1212,7 +1242,7 @@
               <span class="brand"><span class="brand-mark"></span>AI-преподаватель</span
               ><span>04 / 10</span>
             </div>
-            <div class="two-col-left stack reveal">
+            <div class="two-col-left s5-left stack reveal">
               <div>
                 <h2 data-editable="true">
                   Сильное обучение с AI строится как
@@ -1220,33 +1250,22 @@
                   , а не как один запрос
                 </h2>
               </div>
-              <p class="body" data-editable="true">
-                AI особенно полезен, когда вы просите не только ответ, но и проверку понимания:
-                объяснение, уточнение, упражнение, обратную связь и следующий шаг.
-              </p>
-              <div class="card white stat-card">
-                <p class="label">принцип</p>
-                <div class="stat">ask -> test -> refine</div>
-                <p class="body-sm" data-editable="true">
-                  Сначала понять, затем проверить себя, потом исправить пробелы.
-                </p>
-              </div>
             </div>
             <div class="s5-table reveal">
               <div class="matrix">
-                <div class="cell head">шаг</div>
-                <div class="cell head">что попросить</div>
-                <div class="cell head">зачем</div>
-                <div class="cell">Объяснение</div>
+                <div class="cell head">Шаг</div>
+                <div class="cell head">Что попросить</div>
+                <div class="cell head">Зачем</div>
+                <div class="cell">1. Объяснение</div>
                 <div class="cell">Объясни тему простым языком, потом добавь строгие термины</div>
                 <div class="cell">Снять первый барьер</div>
-                <div class="cell">Уточнение</div>
+                <div class="cell">2. Уточнение</div>
                 <div class="cell">Покажи другой пример и объясни, где я могу ошибиться</div>
                 <div class="cell">Закрыть пробелы</div>
-                <div class="cell">Проверка</div>
+                <div class="cell">3. Проверка</div>
                 <div class="cell">Задай 5 вопросов от простого к сложному и оцени ответы</div>
                 <div class="cell">Понять реальный уровень</div>
-                <div class="cell">Закрепление</div>
+                <div class="cell">4. Закрепление</div>
                 <div class="cell">Дай короткое упражнение и разбери мой ответ</div>
                 <div class="cell">Перейти к практике</div>
               </div>
