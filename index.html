@@ -821,6 +821,48 @@
         line-height: 1.42;
       }
 
+      .s3-title {
+        grid-column: 1 / 6;
+        grid-row: 2 / 8;
+        align-self: center;
+      }
+
+      .s3-title h2 {
+        margin: 0 0 34px;
+        font-size: 76px;
+        line-height: 1.04;
+        letter-spacing: -2.2px;
+      }
+
+      .s3-title .body {
+        max-width: 760px;
+      }
+
+      .s3-cards {
+        grid-column: 6 / 13;
+        grid-row: 2 / 9;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        align-content: center;
+      }
+
+      .s3-card {
+        min-height: 318px;
+        padding: 40px 38px;
+      }
+
+      .s3-card .s2-icon {
+        margin-bottom: 34px;
+      }
+
+      .s3-card h3 {
+        margin-bottom: 18px;
+        font-size: 27px;
+        line-height: 1.14;
+        letter-spacing: -0.35px;
+      }
+
       .s4-flow {
         grid-column: 1 / 8;
         grid-row: 5 / 9;
@@ -1120,83 +1162,46 @@
               <span class="brand"><span class="brand-mark"></span>Персонализация обучения</span
               ><span>03 / 10</span>
             </div>
-            <div class="section-title wide reveal">
-              <p class="label">учиться в своем темпе</p>
+            <div class="s3-title reveal">
               <h2 data-editable="true">
-                Один материал можно объяснить под
-                <mark>разный уровень</mark>
-                подготовки
+                AI объясняет один и тот же материал <mark>на разных уровнях</mark>
               </h2>
+              <p class="body" data-editable="true">
+                AI подстраивается под ваш уровень, цели и стиль обучения, помогает задавать вопросы
+                и делает обучение понятным и эффективным.
+              </p>
             </div>
-            <div class="grid-3" style="grid-column: 1 / 8">
-              <div class="card stack reveal">
-                <p class="label">01</p>
-                <h3 data-editable="true">Уровень сложности</h3>
-                <div class="list">
-                  <div class="list-item">
-                    <span class="badge">A</span>
-                    <p class="body-sm" data-editable="true">
-                      Попросите объяснить тему для школьника, студента, новичка или специалиста.
-                    </p>
-                  </div>
-                  <div class="list-item">
-                    <span class="badge">B</span>
-                    <p class="body-sm" data-editable="true">
-                      Уточняйте формат: аналогии, формулы, примеры, упражнения или план.
-                    </p>
-                  </div>
-                </div>
+            <div class="s3-cards">
+              <div class="card s2-card s3-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="sliders-horizontal"></i></span>
+                <h3 data-editable="true">Выбор уровня сложности</h3>
+                <p class="body-sm" data-editable="true">
+                  AI объясняет материал на нужном уровне: для школьника, студента, новичка или
+                  специалиста.
+                </p>
               </div>
-              <div class="card yellow stack reveal">
-                <p class="label">02</p>
-                <h3 data-editable="true">Уточнения без стеснения</h3>
-                <div class="list">
-                  <div class="list-item">
-                    <span class="badge">A</span>
-                    <p class="body-sm" data-editable="true">
-                      Можно возвращаться к непонятным местам столько раз, сколько нужно.
-                    </p>
-                  </div>
-                  <div class="list-item">
-                    <span class="badge">B</span>
-                    <p class="body-sm" data-editable="true">
-                      AI не оценивает вопрос как “слишком простой” и не устает от повторений.
-                    </p>
-                  </div>
-                </div>
+              <div class="card s2-card s3-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="message-circle-question"></i></span>
+                <h3 data-editable="true">Уточняющие вопросы без стеснения</h3>
+                <p class="body-sm" data-editable="true">
+                  Можно задавать любые вопросы и получать понятные ответы без ограничений.
+                </p>
               </div>
-              <div class="card stack reveal">
-                <p class="label">03</p>
-                <h3 data-editable="true">Индивидуальный план</h3>
-                <div class="list">
-                  <div class="list-item">
-                    <span class="badge">A</span>
-                    <p class="body-sm" data-editable="true">
-                      AI может предложить маршрут обучения под цель, срок и уровень.
-                    </p>
-                  </div>
-                  <div class="list-item">
-                    <span class="badge">B</span>
-                    <p class="body-sm" data-editable="true">
-                      План можно усложнять, сокращать и адаптировать по результатам.
-                    </p>
-                  </div>
-                </div>
+              <div class="card s2-card s3-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="clipboard-list"></i></span>
+                <h3 data-editable="true">Индивидуальный план обучения</h3>
+                <p class="body-sm" data-editable="true">
+                  AI помогает составить план под вашу цель, срок и текущий уровень знаний.
+                </p>
               </div>
-            </div>
-            <div class="s3-prompt card code-window reveal">
-              <div class="window-bar"><span>learning_prompt.md</span><span>example</span></div>
-              <pre class="code"><span class="kw">Роль:</span> преподаватель
-<span class="kw">Задача:</span> объясни квантовую физику
-<span class="kw">Аудитория:</span> мне 12 лет
-<span class="kw">Формат:</span>
-  1. простая аналогия
-  2. объяснение в 5 пунктах
-  3. три вопроса для самопроверки
-
-<span class="muted">Правило:</span>
-если я ошибусь,
-разбери ошибку простыми словами.</pre>
+              <div class="card s2-card s3-card reveal">
+                <span class="s2-icon" aria-hidden="true"><i data-lucide="lightbulb"></i></span>
+                <h3 data-editable="true">Примеры и упражнения для закрепления</h3>
+                <p class="body-sm" data-editable="true">
+                  AI подбирает аналогии, примеры и практические задания, чтобы лучше понять и
+                  запомнить тему.
+                </p>
+              </div>
             </div>
           </div>
         </section>
