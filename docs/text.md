@@ -1,3 +1,48 @@
+Unsplash Варианты
+Слайд 1 — AI для обучения и работы:
+
+1. https://unsplash.com/photos/desk-with-open-book-laptop-and-study-materials-HNjWq8WPyoY
+2. https://unsplash.com/photos/laptop-phone-notebook-and-water-bottle-on-desk-ruAse4-q5Us
+3. https://unsplash.com/photos/robot-using-laptop-mgJQ3aV1LWE
+
+Слайд 2 — AI как помощник по мышлению:
+
+1. https://unsplash.com/photos/fyWHYqu7D6A
+2. https://unsplash.com/photos/artificial-intelligence-concept-within-a-human-head-7F9PhBM1gFM
+3. https://unsplash.com/photos/glowing-ai-chip-on-a-circuit-board-w69Z8K-HGQU
+
+Слайд 3 — объяснение на разных уровнях:
+
+1. https://unsplash.com/photos/man-reads-a-book-while-using-his-laptop-UTlOiM_KAfQ
+2. https://unsplash.com/photos/a-laptop-displays-a-statistical-data-table-P9IfvqUJgaI
+3. https://unsplash.com/photos/open-notebook-with-pen-on-laptop-keyboard-9Aydl0tpsas
+
+Слайд 4 — обучение через диалог:
+
+1. https://unsplash.com/photos/a-teacher-assists-a-student-in-a-classroom-Ix-axXotEg0
+2. https://unsplash.com/photos/teacher-asking-a-question-to-students-in-a-classroom-BBetMyb5ePA
+3. https://unsplash.com/photos/teacher-interacting-with-students-in-a-classroom-setting-c6QLJhezaYs
+
+Слайд 5 — хороший промпт как инструкция:
+
+1. https://unsplash.com/photos/a-person-writing-on-a-notebook-with-a-laptop-in-the-background-0KT9gxj_BdM
+2. https://unsplash.com/photos/a-black-notebook-with-notes-written-on-it-rtuIemEGvRU
+3. https://unsplash.com/photos/open-notebook-with-pen-on-laptop-keyboard-9Aydl0tpsas
+
+Слайд 6 — ограничения, проверка, риски:
+
+1. https://unsplash.com/photos/two-women-analyze-a-line-graph-on-a-screen-71pmZ9rN-hA
+2. https://unsplash.com/photos/a-laptop-displays-a-statistical-data-table-P9IfvqUJgaI
+3. https://unsplash.com/photos/a-laptop-on-a-table-uifTyG8vUCk
+
+Слайд 7 — будущее с AI:
+
+1. https://unsplash.com/photos/a-robotic-hand-that-is-holding-a-laptop-1c8k838LXpk
+2. https://unsplash.com/photos/a-robot-standing-next-to-a-laptop-qniDxn6-qvY
+3. https://unsplash.com/photos/glowing-ai-chip-on-a-circuit-board-w69Z8K-HGQU
+
+---
+
 # Как использовать AI для обучения и работы
 
 ---
