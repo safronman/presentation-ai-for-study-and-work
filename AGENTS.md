@@ -2,42 +2,54 @@
 
 ## Project Structure & Module Organization
 
-This repository contains a static HTML presentation. The main artifact is `ai-for-study-and-work.html`, a single self-contained deck with inline CSS and JavaScript. There is currently no `src/`, `tests/`, or build directory. IDE metadata lives in `.idea/` and should not be treated as application source.
+This repository contains static HTML presentations. The main artifacts are `index.html` and `index-2.html`, each a self-contained deck with inline CSS and JavaScript. Supporting source notes live in `docs/`. There is currently no `src/`, `tests/`, or build output directory. IDE metadata lives in `.idea/` and should not be treated as application source.
 
-If the deck grows, keep related assets in a sibling folder named after the deck, for example `ai-for-study-and-work-assets/`, and reference them with relative paths.
+If a deck grows beyond self-contained HTML, keep related assets in a sibling folder named after the deck, for example `index-assets/` or `index-2-assets/`, and reference them with relative paths.
 
 ## Build, Test, and Development Commands
 
-No package manager or build system is configured. Open the presentation directly in a browser:
+This project uses `pnpm` for local tooling. No build step is configured; open the presentation directly in a browser:
 
 ```powershell
-Start-Process -FilePath .\ai-for-study-and-work.html
+Start-Process -FilePath .\index.html
+Start-Process -FilePath .\index-2.html
 ```
 
 For a quick markup search or content audit:
 
 ```powershell
-Select-String -Path .\ai-for-study-and-work.html -Pattern "section class=`"slide"
+Select-String -Path .\index.html, .\index-2.html -Pattern "section class=`"slide"
 ```
 
-If future tooling is added, document the exact commands here before relying on them in reviews or automation.
+Formatting is handled by Prettier:
+
+```powershell
+pnpm format
+pnpm format:check
+```
+
+Playwright is available for browser-based checks:
+
+```powershell
+pnpm exec playwright test
+```
 
 ## Coding Style & Naming Conventions
 
-Use plain HTML, CSS, and JavaScript unless a build pipeline is intentionally introduced. Keep the presentation self-contained where practical: inline styles, inline scripts, and fixed 1920x1080 slide layout. Use two-space or four-space indentation consistently within edited sections; the current HTML uses four spaces.
+Use plain HTML, CSS, and JavaScript unless a build pipeline is intentionally introduced. Keep the presentation self-contained where practical: inline styles, inline scripts, and fixed 1920x1080 slide layout. Use Prettier defaults for files covered by the formatter, and keep indentation consistent within edited sections when making narrow manual changes.
 
-Name presentation files with lowercase kebab-case, for example `ai-for-study-and-work.html`. Keep CSS sections clearly commented with `/* === SECTION NAME === */`.
+Name new presentation files with lowercase kebab-case. Keep CSS sections clearly commented with `/* === SECTION NAME === */`.
 
 ## Testing Guidelines
 
-There is no automated test framework. Validate changes manually by opening the HTML in a browser and checking:
+Validate presentation changes manually in a browser or with Playwright by checking:
 
 - slide navigation with arrow keys and Space;
 - all 10 slides are reachable;
 - no text overflows panels at fullscreen and smaller browser sizes;
 - edit mode toggles with `E` and text remains editable.
 
-For structural checks, search for slide sections and confirm only one starts with `class="slide active"`.
+For structural checks, search `index.html` and `index-2.html` for slide sections and confirm only one slide per deck starts with `class="slide active"`.
 
 ## Commit & Pull Request Guidelines
 
@@ -53,7 +65,7 @@ Pull requests should include a short summary, screenshots or a screen recording 
 
 ## Agent-Specific Instructions
 
-Do not introduce npm, bundlers, or external dependencies unless the task requires them. Keep edits scoped to presentation content and supporting documentation. Avoid modifying `.idea/` unless explicitly requested.
+Use `pnpm` for project tooling; do not use `npm` or `yarn` for dependency changes unless the user explicitly requests it. Do not introduce bundlers or a build pipeline unless the task requires them. Keep edits scoped to presentation content, supporting documentation, and configured tooling. Avoid modifying `.idea/` unless explicitly requested.
 
 When creating, redesigning, or visually rendering presentation layouts, always read and apply `DESIGN.md` first. Treat it as the source of truth for colors, typography, spacing, component style, and overall visual direction unless the user explicitly requests a different design system.
 
