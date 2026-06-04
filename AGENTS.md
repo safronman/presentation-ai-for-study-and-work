@@ -72,6 +72,8 @@ Make presentation changes only in `index.html`. Do not edit files in `versions/`
 
 When creating, redesigning, or visually rendering presentation layouts, always read and apply `DESIGN.md` first. Treat it as the source of truth for colors, typography, spacing, component style, and overall visual direction unless the user explicitly requests a different design system.
 
+For presentation UI, style tables, repeated list items, prompt parts, and similar content blocks as dark rounded cards matching the established slide card pattern: near-black surface, subtle border, 12px radius, restrained yellow accent, and no large empty wrapper panel behind individual cards unless the layout specifically needs a framed tool.
+
 For `index.html` visual edits, do not launch Playwright or browser automation after completing the change unless the user explicitly requests testing.
 
 After completing any file change or task step, suggest one recommended commit message that matches the actual change. Use Conventional Commit style, for example `docs: update repository guidelines` or `feat: revise presentation landing slide`.

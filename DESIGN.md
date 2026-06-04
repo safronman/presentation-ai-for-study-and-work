@@ -201,6 +201,14 @@ components:
     typography: "{typography.title-md}"
     rounded: "{rounded.lg}"
     padding: 32px
+  structured-content-card:
+    backgroundColor: "{colors.surface-card}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.title-md}"
+    rounded: "{rounded.lg}"
+    border: "1px solid {colors.hairline}"
+    padding: 24px 28px
+    accent: "small {colors.primary} index, icon, or mark only"
   code-window-card:
     backgroundColor: "{colors.surface-card}"
     textColor: "{colors.on-dark}"
@@ -453,6 +461,8 @@ The system uses no drop shadows. Depth comes from the contrast between black can
 **`feature-card-yellow`** — Full-bleed yellow card ("Built for every modern data challenge"). Background `{colors.primary}`, text `{colors.on-yellow}` (black), rounded `{rounded.lg}` (12px), padding `{spacing.xl}` (32px). The yellow card IS the visual emphasis.
 
 **`feature-card-dark`** — Standard dark feature card. Background `{colors.surface-card}`, text `{colors.on-dark}`, rounded `{rounded.lg}`, padding `{spacing.xl}` (32px).
+
+**`structured-content-card`** — Standard pattern for tables, repeated prompt parts, step lists, and other structured content in presentations. Each logical row/item should be its own dark card with `{colors.surface-card}` or a near-black surface, a subtle `{colors.hairline}` border, rounded `{rounded.lg}` (12px), and compact padding. Use yellow only as a small index, icon, header cell, or inline mark. Avoid placing these cards inside a large empty wrapper panel unless the whole block is a framed tool.
 
 **`code-window-card`** — Dark card showing a SQL code block. Background `{colors.surface-card}`, code in JetBrains Mono with syntax highlighting, rounded `{rounded.lg}`, padding `{spacing.lg}` (24px). Often the hero's right-side artifact on developer-focused pages.
 

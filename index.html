@@ -1068,20 +1068,25 @@
       .s8-rules.prompt-parts {
         display: grid;
         gap: 14px;
-        padding: 26px 34px;
       }
 
       .prompt-part {
         display: grid;
         grid-template-columns: 58px 1fr;
         gap: 18px;
-        padding-bottom: 14px;
-        border-bottom: 1px solid var(--hairline);
+        align-items: start;
+        padding: 24px 28px;
+        border: 1px solid rgba(255, 255, 255, 0.055);
+        border-radius: 12px;
+        background:
+          radial-gradient(circle at 11% 20%, rgba(250, 255, 105, 0.07), transparent 26%),
+          linear-gradient(150deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.006)),
+          #0d0c0c;
       }
 
       .prompt-part:last-child {
-        padding-bottom: 0;
-        border-bottom: 0;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.055);
       }
 
       .prompt-part .rule-index {
@@ -1094,17 +1099,8 @@
       }
 
       .prompt-part .body-sm {
-        font-size: 16px;
-        line-height: 1.38;
-      }
-
-      .prompt-example {
-        margin-top: 8px;
-        padding-left: 14px;
-        border-left: 2px solid var(--hairline-strong);
-        color: var(--body-strong);
-        font-size: 15px;
-        line-height: 1.38;
+        font-size: 18px;
+        line-height: 1.42;
       }
 
       .s8-prompt {
@@ -1113,9 +1109,9 @@
       }
 
       .s8-prompt .code {
-        padding: 24px 28px 30px;
-        font-size: 15px;
-        line-height: 1.36;
+        padding: 30px 34px 34px;
+        font-size: 18px;
+        line-height: 1.32;
       }
 
       .s10-future {
@@ -1420,16 +1416,12 @@
                 Структурируйте запрос как <mark>инструкцию</mark>, а не как вопрос
               </h2>
             </div>
-            <div class="s8-rules prompt-parts card reveal">
+            <div class="s8-rules prompt-parts reveal">
               <div class="prompt-part">
                 <span class="rule-index">01</span>
                 <div>
                   <h3 data-editable="true">Роль</h3>
                   <p class="body-sm" data-editable="true">Опишите, кем должна быть модель.</p>
-                  <p class="prompt-example" data-editable="true">
-                    Ты — опытный преподаватель математики, который объясняет сложные темы простым
-                    языком.
-                  </p>
                 </div>
               </div>
               <div class="prompt-part">
@@ -1437,9 +1429,6 @@
                 <div>
                   <h3 data-editable="true">Цель</h3>
                   <p class="body-sm" data-editable="true">Определите конечный результат.</p>
-                  <p class="prompt-example" data-editable="true">
-                    Научи начинающего студента понимать и вычислять производные.
-                  </p>
                 </div>
               </div>
               <div class="prompt-part">
@@ -1449,9 +1438,6 @@
                   <p class="body-sm" data-editable="true">
                     Укажите, что обязательно должно быть в ответе.
                   </p>
-                  <p class="prompt-example" data-editable="true">
-                    Объяснить смысл производной, разобрать правила и привести примеры вычислений.
-                  </p>
                 </div>
               </div>
               <div class="prompt-part">
@@ -1459,9 +1445,6 @@
                 <div>
                   <h3 data-editable="true">Формат ответа</h3>
                   <p class="body-sm" data-editable="true">Покажите структуру результата заранее.</p>
-                  <p class="prompt-example" data-editable="true">
-                    Основная идея, определение, правила, примеры, применение.
-                  </p>
                 </div>
               </div>
               <div class="prompt-part">
@@ -1469,10 +1452,6 @@
                 <div>
                   <h3 data-editable="true">Ограничения</h3>
                   <p class="body-sm" data-editable="true">Укажите, чего делать не нужно.</p>
-                  <p class="prompt-example" data-editable="true">
-                    Без сложного жаргона, длинных доказательств и пошаговых вычислений без
-                    объяснений.
-                  </p>
                 </div>
               </div>
             </div>
