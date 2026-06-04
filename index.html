@@ -996,6 +996,17 @@
         grid-row: 2 / 4;
       }
 
+      .s8-title h2 {
+        margin-bottom: 22px;
+      }
+
+      .s8-subtitle {
+        max-width: 900px;
+        color: var(--body);
+        font-size: 28px;
+        line-height: 1.42;
+      }
+
       .s8-stat {
         grid-column: 8 / 13;
         grid-row: 2 / 4;
@@ -1054,9 +1065,57 @@
         grid-row: 4 / 9;
       }
 
+      .s8-rules.prompt-parts {
+        display: grid;
+        gap: 14px;
+        padding: 26px 34px;
+      }
+
+      .prompt-part {
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        gap: 18px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--hairline);
+      }
+
+      .prompt-part:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .prompt-part .rule-index {
+        font-size: 19px;
+      }
+
+      .prompt-part h3 {
+        margin-bottom: 7px;
+        font-size: 21px;
+      }
+
+      .prompt-part .body-sm {
+        font-size: 16px;
+        line-height: 1.38;
+      }
+
+      .prompt-example {
+        margin-top: 8px;
+        padding-left: 14px;
+        border-left: 2px solid var(--hairline-strong);
+        color: var(--body-strong);
+        font-size: 15px;
+        line-height: 1.38;
+      }
+
       .s8-prompt {
         grid-column: 8 / 13;
-        grid-row: 4 / 9;
+        grid-row: 2 / 9;
+      }
+
+      .s8-prompt .code {
+        padding: 24px 28px 30px;
+        font-size: 15px;
+        line-height: 1.36;
       }
 
       .s10-future {
@@ -1182,7 +1241,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>AI for study and work</span>
-              <span>01 / 10</span>
+              <span>01 / 8</span>
             </div>
             <div class="hero-copy reveal">
               <h1 data-editable="true">Как использовать <em>AI</em> для обучения и работы</h1>
@@ -1204,7 +1263,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Что такое AI</span
-              ><span>02 / 10</span>
+              ><span>02 / 8</span>
             </div>
             <div class="section-title wide s2-title reveal">
               <h2 data-editable="true">
@@ -1252,7 +1311,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Персонализация обучения</span
-              ><span>03 / 10</span>
+              ><span>03 / 8</span>
             </div>
             <div class="s3-title reveal">
               <h2 data-editable="true">
@@ -1302,7 +1361,7 @@
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>AI-преподаватель</span
-              ><span>04 / 10</span>
+              ><span>04 / 8</span>
             </div>
             <div class="two-col-left s5-left stack reveal">
               <div>
@@ -1346,63 +1405,107 @@
           </div>
         </section>
 
+        
+
+        
+
         <section class="slide" aria-label="Слайд 5">
           <div class="shell">
             <div class="topbar reveal">
-              <span class="brand"><span class="brand-mark"></span>Работа с текстами</span
-              ><span>05 / 10</span>
+              <span class="brand"><span class="brand-mark"></span>Как работать с AI</span
+              ><span>05 / 8</span>
             </div>
-            <div class="s6-left stack reveal">
-              <div>
-                <p class="label">от черновика к редактуре</p>
-                <h2 data-editable="true">
-                  AI ускоряет
-                  <mark>текстовую работу</mark>
-                  , но финальная редактура остается за человеком
-                </h2>
-              </div>
-              <div class="mini-grid">
-                <div class="card mini-card">
-                  <h3 data-editable="true">Черновики</h3>
-                  <p class="body-sm" data-editable="true">
-                    Документы, письма, посты, отчеты, тезисы и первые версии структуры.
-                  </p>
-                </div>
-                <div class="card white mini-card">
-                  <h3 data-editable="true">Редактура</h3>
-                  <p class="body-sm" data-editable="true">
-                    Исправление ошибок, упрощение, смена тона и адаптация под аудиторию.
-                  </p>
-                </div>
-                <div class="card yellow mini-card">
-                  <h3 data-editable="true">Сокращение</h3>
-                  <p class="body-sm" data-editable="true">
-                    Большие тексты превращаются в выводы, риски и следующие шаги.
-                  </p>
-                </div>
-                <div class="card mini-card">
-                  <h3 data-editable="true">Структура</h3>
-                  <p class="body-sm" data-editable="true">
-                    План статьи, презентации, инструкции, FAQ или документации.
+            <div class="s8-title reveal">
+              <h2 data-editable="true">
+                Структурируйте запрос как <mark>инструкцию</mark>, а не как вопрос
+              </h2>
+            </div>
+            <div class="s8-rules prompt-parts card reveal">
+              <div class="prompt-part">
+                <span class="rule-index">01</span>
+                <div>
+                  <h3 data-editable="true">Роль</h3>
+                  <p class="body-sm" data-editable="true">Опишите, кем должна быть модель.</p>
+                  <p class="prompt-example" data-editable="true">
+                    Ты — опытный преподаватель математики, который объясняет сложные темы простым
+                    языком.
                   </p>
                 </div>
               </div>
+              <div class="prompt-part">
+                <span class="rule-index">02</span>
+                <div>
+                  <h3 data-editable="true">Цель</h3>
+                  <p class="body-sm" data-editable="true">Определите конечный результат.</p>
+                  <p class="prompt-example" data-editable="true">
+                    Научи начинающего студента понимать и вычислять производные.
+                  </p>
+                </div>
+              </div>
+              <div class="prompt-part">
+                <span class="rule-index">03</span>
+                <div>
+                  <h3 data-editable="true">Критерии качества</h3>
+                  <p class="body-sm" data-editable="true">
+                    Укажите, что обязательно должно быть в ответе.
+                  </p>
+                  <p class="prompt-example" data-editable="true">
+                    Объяснить смысл производной, разобрать правила и привести примеры вычислений.
+                  </p>
+                </div>
+              </div>
+              <div class="prompt-part">
+                <span class="rule-index">04</span>
+                <div>
+                  <h3 data-editable="true">Формат ответа</h3>
+                  <p class="body-sm" data-editable="true">Покажите структуру результата заранее.</p>
+                  <p class="prompt-example" data-editable="true">
+                    Основная идея, определение, правила, примеры, применение.
+                  </p>
+                </div>
+              </div>
+              <div class="prompt-part">
+                <span class="rule-index">05</span>
+                <div>
+                  <h3 data-editable="true">Ограничения</h3>
+                  <p class="body-sm" data-editable="true">Укажите, чего делать не нужно.</p>
+                  <p class="prompt-example" data-editable="true">
+                    Без сложного жаргона, длинных доказательств и пошаговых вычислений без
+                    объяснений.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="s6-right card code-window reveal">
-              <div class="window-bar"><span>text_work.prompt</span><span>copy-ready</span></div>
-              <pre class="code"><span class="kw">Задача:</span> сделай краткое резюме отчета
-<span class="kw">Формат:</span> 3 блока
-  1. ключевые выводы
-  2. риски
-  3. следующие шаги
+            <div class="s8-prompt card code-window reveal">
+              <div class="window-bar"><span>good_prompt.md</span><span>template</span></div>
+              <pre class="code"><span class="kw"># Роль</span>
+Ты — опытный преподаватель математики,
+который объясняет сложные темы простым языком.
 
-<span class="kw">Критерии:</span>
-  - без общих фраз
-  - сохрани важные цифры
-  - до 5 пунктов в блоке
+<span class="kw"># Цель</span>
+Кратко и понятно объяснить производные
+для начинающего студента.
 
-<span class="muted">После ответа:</span>
-проверь, что не потерялся смысл.</pre>
+<span class="kw"># Критерии успеха</span>
+- Объяснить смысл производной
+- Рассмотреть основные правила
+- Показать примеры вычислений
+- Рассказать о применении
+
+<span class="kw"># Ограничения</span>
+- Без сложного жаргона
+- Без длинных доказательств
+- Пошаговые объяснения
+
+<span class="kw"># Формат ответа</span>
+1. Основная идея
+2. Определение
+3. Правила
+4. Примеры
+5. Применение
+
+<span class="kw"># Правила остановки</span>
+Заверши ответ кратким резюме.</pre>
             </div>
           </div>
         </section>
@@ -1410,130 +1513,8 @@
         <section class="slide" aria-label="Слайд 6">
           <div class="shell">
             <div class="topbar reveal">
-              <span class="brand"><span class="brand-mark"></span>Профессиональные сценарии</span
-              ><span>06 / 10</span>
-            </div>
-            <div class="s7-code card product reveal">
-              <div class="product-head"><span>work_ai_matrix</span><span>human-owned</span></div>
-              <div class="product-body">
-                <div class="metric"><span>подготовка</span><strong>fast</strong></div>
-                <div class="metric"><span>структура</span><strong>clear</strong></div>
-                <div class="metric"><span>варианты</span><strong>many</strong></div>
-                <div class="metric"><span>решение</span><strong>you</strong></div>
-              </div>
-              <div class="product-foot">
-                <span>AI экономит время, но не заменяет профессиональное суждение</span>
-              </div>
-            </div>
-            <div class="s7-blocks">
-              <div class="card stack reveal">
-                <p class="label">маркетинг</p>
-                <h3 data-editable="true">Идеи и аудитория</h3>
-                <p class="body-sm" data-editable="true">
-                  Контент-планы, варианты текстов, гипотезы, анализ сегментов и быстрые черновики
-                  кампаний.
-                </p>
-              </div>
-              <div class="card white stack reveal">
-                <p class="label">разработка</p>
-                <h3 data-editable="true">Код и документация</h3>
-                <p class="body-sm" data-editable="true">
-                  Объяснение кода, поиск ошибок, примеры, README, комментарии и технические заметки.
-                </p>
-              </div>
-              <div class="card yellow stack reveal">
-                <p class="label">аналитика</p>
-                <h3 data-editable="true">Выводы и отчеты</h3>
-                <p class="body-sm" data-editable="true">
-                  Структура отчета, интерпретация данных, список допущений, риски и вопросы для
-                  проверки.
-                </p>
-              </div>
-              <div class="card stack reveal">
-                <p class="label">проекты</p>
-                <h3 data-editable="true">Планы и коммуникации</h3>
-                <p class="body-sm" data-editable="true">
-                  Протоколы встреч, задачи, статусы, аргументы для решений и документация по
-                  процессам.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="slide" aria-label="Слайд 7">
-          <div class="shell">
-            <div class="topbar reveal">
-              <span class="brand"><span class="brand-mark"></span>Как работать с AI</span
-              ><span>07 / 10</span>
-            </div>
-            <div class="s8-title reveal">
-              <p class="label">качество входа -> качество выхода</p>
-              <h2 data-editable="true">
-                Хороший запрос задает
-                <mark>цель</mark>
-                , контекст, формат и критерии качества
-              </h2>
-            </div>
-            <div class="s8-stat card yellow stat-card reveal">
-              <p class="label">формула</p>
-              <div class="stat">5</div>
-              <p class="body-sm" data-editable="true">
-                роль -> задача -> контекст -> формат ответа -> критерии качества.
-              </p>
-            </div>
-            <div class="s8-rules card reveal">
-              <div class="rule-line">
-                <span class="rule-index">01</span>
-                <p class="body-sm" data-editable="true">
-                  <strong>Формулируйте конкретную задачу.</strong> Не “помоги с темой”, а “составь
-                  план доклада на 10 минут для начинающих”.
-                </p>
-              </div>
-              <div class="rule-line">
-                <span class="rule-index">02</span>
-                <p class="body-sm" data-editable="true">
-                  <strong>Добавляйте контекст.</strong> Укажите аудиторию, цель, ограничения,
-                  исходные данные и желаемый уровень детализации.
-                </p>
-              </div>
-              <div class="rule-line">
-                <span class="rule-index">03</span>
-                <p class="body-sm" data-editable="true">
-                  <strong>Задавайте формат.</strong> Таблица, список, письмо, чек-лист, план,
-                  вопросы для самопроверки или структура слайдов.
-                </p>
-              </div>
-              <div class="rule-line">
-                <span class="rule-index">04</span>
-                <p class="body-sm" data-editable="true">
-                  <strong>Уточняйте и проверяйте.</strong> Просите найти слабые места, альтернативы,
-                  ошибки и недостающие предположения.
-                </p>
-              </div>
-            </div>
-            <div class="s8-prompt card code-window reveal">
-              <div class="window-bar"><span>good_prompt.md</span><span>template</span></div>
-              <pre class="code"><span class="kw">Роль:</span> ты преподаватель математики
-<span class="kw">Задача:</span> объясни производные
-<span class="kw">Аудитория:</span> студент первого курса
-<span class="kw">Формат:</span>
-  - простое объяснение
-  - 2 примера
-  - короткий тест
-<span class="kw">Критерии:</span>
-  - без лишней теории
-  - проверь типичные ошибки
-  - предложи следующий шаг</pre>
-            </div>
-          </div>
-        </section>
-
-        <section class="slide" aria-label="Слайд 8">
-          <div class="shell">
-            <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Ограничения и риски</span
-              ><span>08 / 10</span>
+              ><span>06 / 8</span>
             </div>
             <div class="s9-title reveal">
               <p class="label">ответственность остается у человека</p>
@@ -1587,11 +1568,11 @@
           </div>
         </section>
 
-        <section class="slide" aria-label="Слайд 9">
+        <section class="slide" aria-label="Слайд 7">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Будущее с AI</span
-              ><span>09 / 10</span>
+              ><span>07 / 8</span>
             </div>
             <div class="s10-title reveal">
               <p class="label">цифровая грамотность</p>
@@ -1666,11 +1647,11 @@ AI ускоряет подготовку,
           </div>
         </section>
 
-        <section class="slide" aria-label="Слайд 10">
+        <section class="slide" aria-label="Слайд 8">
           <div class="shell">
             <div class="topbar reveal">
               <span class="brand"><span class="brand-mark"></span>Учебные сценарии</span
-              ><span>10 / 10</span>
+              ><span>08 / 8</span>
             </div>
             <div class="s4-left stack reveal">
               <div>
@@ -1739,7 +1720,7 @@ AI ускоряет подготовку,
     </div>
 
     <div class="deck-controls" aria-label="Presentation controls">
-      <span id="counter">01 / 10</span>
+      <span id="counter">01 / 8</span>
       <div class="progress-track" aria-hidden="true">
         <div class="progress-fill" id="progressFill"></div>
       </div>
