@@ -27,6 +27,7 @@
     "prettier": "^3.8.3"
   },
   "dependencies": {
+    "@lobehub/icons": "^5.10.0",
     "lucide": "^1.17.0"
   }
 }
