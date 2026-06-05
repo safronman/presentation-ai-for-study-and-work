@@ -909,7 +909,7 @@
         display: grid;
         grid-template-columns: 70px 74px 1fr;
         gap: 28px;
-        align-items: start;
+        align-items: center;
         min-height: 182px;
         padding: 30px 34px;
         border: 1px solid rgba(255, 255, 255, 0.06);
@@ -968,11 +968,45 @@
         letter-spacing: -1px;
       }
 
-      .rank-card h3 {
+      .rank-text {
+        align-self: center;
+      }
+
+      .rank-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
         margin-bottom: 12px;
+      }
+
+      .rank-card h3 {
         font-size: 34px;
         line-height: 1.08;
         letter-spacing: -0.6px;
+      }
+
+      .rank-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        flex: 0 0 auto;
+        max-width: 300px;
+        color: var(--primary);
+        font-family: var(--font-mono);
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .rank-link svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+        stroke-width: 2.4;
       }
 
       .rank-card .body-sm {
@@ -1470,8 +1504,11 @@
               >
                 <span class="rank-number">01</span>
                 <span class="rank-icon" data-lobe-icon="Claude" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Claude Opus 4.8</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Claude Opus 4.8</h3>
+                    <span class="rank-link">claude.ai<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Лучший общий интеллект и сильные сложные рассуждения.
                   </p>
@@ -1486,8 +1523,11 @@
               >
                 <span class="rank-number">02</span>
                 <span class="rank-icon" data-lobe-icon="OpenAI" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">GPT-5.5</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">GPT-5.5</h3>
+                    <span class="rank-link">chatgpt.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Лучший баланс интеллекта, универсальности и экосистемы.
                   </p>
@@ -1502,8 +1542,13 @@
               >
                 <span class="rank-number">03</span>
                 <span class="rank-icon" data-lobe-icon="Gemini" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Gemini 3.1 Pro</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Gemini 3.1 Pro</h3>
+                    <span class="rank-link"
+                      >gemini.google.com<i data-lucide="external-link"></i
+                    ></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Сильная работа с контекстом и большими объемами данных.
                   </p>
@@ -1537,8 +1582,11 @@
               >
                 <span class="rank-number">01</span>
                 <span class="rank-icon" data-lobe-icon="OpenAI" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">GPT Image 2</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">GPT Image 2</h3>
+                    <span class="rank-link">chatgpt.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Лучшее качество генерации изображений.</p>
                 </div>
               </a>
@@ -1551,8 +1599,13 @@
               >
                 <span class="rank-number">02</span>
                 <span class="rank-icon" data-lobe-icon="Gemini" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Nano Banana 2</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Nano Banana 2</h3>
+                    <span class="rank-link"
+                      >gemini.google.com<i data-lucide="external-link"></i
+                    ></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Очень высокая точность и реализм.</p>
                 </div>
               </a>
@@ -1565,8 +1618,11 @@
               >
                 <span class="rank-number">03</span>
                 <span class="rank-icon" data-lobe-icon="Recraft" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Recraft V4.1 Utility Pro</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Recraft V4.1 Utility Pro</h3>
+                    <span class="rank-link">recraft.ai<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Лидер для дизайна, графики и прикладных визуальных задач.
                   </p>
@@ -1599,8 +1655,11 @@
               >
                 <span class="rank-number">01</span>
                 <span class="rank-icon" data-lobe-icon="ByteDance" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Seedance 2.0</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Seedance 2.0</h3>
+                    <span class="rank-link">seedance.ai<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Лучшее качество видео по рейтингу пользователей.
                   </p>
@@ -1615,8 +1674,11 @@
               >
                 <span class="rank-number">02</span>
                 <span class="rank-icon" data-lobe-icon="Hailuo" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Hailuo / HappyHorse 1.0</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Hailuo / HappyHorse 1.0</h3>
+                    <span class="rank-link">hailuoai.video<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Очень сильный новичок 2026 года.</p>
                 </div>
               </a>
@@ -1629,8 +1691,11 @@
               >
                 <span class="rank-number">03</span>
                 <span class="rank-icon" data-lobe-icon="Kling" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Kling 3.0</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Kling 3.0</h3>
+                    <span class="rank-link">klingai.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Самая стабильная модель для коммерческого видео.
                   </p>
@@ -1664,8 +1729,11 @@
               >
                 <span class="rank-number">01</span>
                 <span class="rank-icon" data-lobe-icon="Claude" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Claude Opus 4.8</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Claude Opus 4.8</h3>
+                    <span class="rank-link">claude.ai<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Лучший агентный кодинг и сложная разработка.
                   </p>
@@ -1680,8 +1748,11 @@
               >
                 <span class="rank-number">02</span>
                 <span class="rank-icon" data-lobe-icon="OpenAI" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">GPT-5.5</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">GPT-5.5</h3>
+                    <span class="rank-link">chatgpt.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Сильнейшая универсальная модель для программирования.
                   </p>
@@ -1696,8 +1767,11 @@
               >
                 <span class="rank-number">03</span>
                 <span class="rank-icon" data-lobe-icon="Cursor" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Cursor</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Cursor</h3>
+                    <span class="rank-link">cursor.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Самая популярная IDE с AI для повседневной разработки.
                   </p>
@@ -1731,8 +1805,11 @@
               >
                 <span class="rank-number">01</span>
                 <span class="rank-icon" data-lobe-icon="ElevenLabs" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">ElevenLabs</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">ElevenLabs</h3>
+                    <span class="rank-link">elevenlabs.io<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Лучшее качество синтеза речи.</p>
                 </div>
               </a>
@@ -1745,8 +1822,11 @@
               >
                 <span class="rank-number">02</span>
                 <span class="rank-icon" data-lobe-icon="OpenAI" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">OpenAI Voice</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">OpenAI Voice</h3>
+                    <span class="rank-link">chatgpt.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Самый естественный диалоговый голос.</p>
                 </div>
               </a>
@@ -1759,8 +1839,11 @@
               >
                 <span class="rank-number">03</span>
                 <span class="rank-icon" data-lobe-icon="AgentVoice" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Cartesia</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Cartesia</h3>
+                    <span class="rank-link">cartesia.ai<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Быстрый и качественный голосовой API.</p>
                 </div>
               </a>
@@ -1792,8 +1875,11 @@
               >
                 <span class="rank-number">01</span>
                 <span class="rank-icon" data-lobe-icon="OpenAI" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Whisper</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Whisper</h3>
+                    <span class="rank-link">openai.com/api<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Эталон точности распознавания речи.</p>
                 </div>
               </a>
@@ -1806,8 +1892,11 @@
               >
                 <span class="rank-number">02</span>
                 <span class="rank-icon" data-lobe-icon="AssemblyAI" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Otter</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Otter</h3>
+                    <span class="rank-link">otter.ai<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Лучший выбор для встреч и командной работы.
                   </p>
@@ -1822,8 +1911,11 @@
               >
                 <span class="rank-number">03</span>
                 <span class="rank-icon" data-lobe-icon="AssemblyAI" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">AssemblyAI</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">AssemblyAI</h3>
+                    <span class="rank-link">assemblyai.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Продвинутая обработка аудио через API.</p>
                 </div>
               </a>
@@ -1855,8 +1947,11 @@
               >
                 <span class="rank-number">01</span>
                 <span class="rank-icon" data-lobe-icon="Suno" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Suno</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Suno</h3>
+                    <span class="rank-link">suno.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">Лучшее создание полноценных песен.</p>
                 </div>
               </a>
@@ -1869,8 +1964,11 @@
               >
                 <span class="rank-number">02</span>
                 <span class="rank-icon" data-lobe-icon="Udio" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Udio</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Udio</h3>
+                    <span class="rank-link">udio.com<i data-lucide="external-link"></i></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Самое качественное музыкальное звучание.
                   </p>
@@ -1885,8 +1983,13 @@
               >
                 <span class="rank-number">03</span>
                 <span class="rank-icon" data-lobe-icon="Stability" aria-hidden="true"></span>
-                <div>
-                  <h3 data-editable="true">Stable Audio</h3>
+                <div class="rank-text">
+                  <div class="rank-heading">
+                    <h3 data-editable="true">Stable Audio</h3>
+                    <span class="rank-link"
+                      >stableaudio.com<i data-lucide="external-link"></i
+                    ></span>
+                  </div>
                   <p class="body-sm" data-editable="true">
                     Отлично подходит для фоновой музыки и эффектов.
                   </p>
